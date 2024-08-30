@@ -4,8 +4,10 @@ import { Spinner } from "../Components/Spinner";
 import {  useBlog } from "../Hooks";
 import { useParams } from "react-router-dom";
 
+
+
 export const Blog = () => {
-  const {id} = useParams();
+  const {id} = useParams<{ id: string }>();
   const {loading ,blog} = useBlog({
     id: id || " "
   });
